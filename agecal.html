@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image:linear-gradient(rgb(244, 174, 88), white, rgb(81, 164, 81)) ;
+    }
+    .calculator-container {
+      background: rgb(251, 251, 251);
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #333;
+    }
+  </style>
+  <script src="cal.js"></script>
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Age Calculator</h1>
+    <form id="ageCalculatorForm">
+      <input type="number" id="day" placeholder="Day (DD)" min="1" max="31" required>
+      <input type="number" id="month" placeholder="Month (MM)" min="1" max="12" required>
+      <input type="number" id="year" placeholder="Year (YYYY)" min="1900" max="2100" required>
+      <button type="button" onclick="calculateAge()">Calculate Age</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  
+</body>
+</html>
